@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank Marketing Prediction</title>
+</head>
+<body>
+    <h2>Bank Marketing Subscription Prediction</h2>
+
+    <form action="/predict" method="post">
+
+        <label>Age:</label>
+        <input type="number" name="age" required><br><br>
+
+        <label>Job:</label>
+        <select name="job" required>
+            <option value="0">Admin</option>
+            <option value="1">Blue Collar</option>
+            <option value="2">Entrepreneur</option>
+            <option value="3">Housemaid</option>
+            <option value="4">Management</option>
+            <option value="5">Retired</option>
+            <option value="6">Self-employed</option>
+            <option value="7">Services</option>
+            <option value="8">Student</option>
+            <option value="9">Technician</option>
+            <option value="10">Unemployed</option>
+        </select><br><br>
+
+        <label>Marital:</label>
+        <select name="marital" required>
+            <option value="0">Single</option>
+            <option value="1">Married</option>
+            <option value="2">Divorced</option>
+        </select><br><br>
+
+        <label>Education:</label>
+        <select name="education" required>
+            <option value="0">Primary</option>
+            <option value="1">Secondary</option>
+            <option value="2">Tertiary</option>
+            <option value="3">Unknown</option>
+        </select><br><br>
+
+        <label>Default:</label>
+        <select name="default" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label>Balance:</label>
+        <input type="number" name="balance" required><br><br>
+
+        <label>Housing:</label>
+        <select name="housing" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label>Loan:</label>
+        <select name="loan" required>
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select><br><br>
+
+        <label>Contact:</label>
+        <select name="contact" required>
+            <option value="0">Cellular</option>
+            <option value="1">Telephone</option>
+            <option value="2">Unknown</option>
+        </select><br><br>
+
+        <label>Day:</label>
+        <input type="number" name="day" required><br><br>
+
+        <label>Month:</label>
+        <select name="month" required>
+            <option value="1">January</option>
+            <option value="2">February</option>
+            <option value="3">March</option>
+            <option value="4">April</option>
+            <option value="5">May</option>
+            <option value="6">June</option>
+            <option value="7">July</option>
+            <option value="8">August</option>
+            <option value="9">September</option>
+            <option value="10">October</option>
+            <option value="11">November</option>
+            <option value="12">December</option>
+        </select><br><br>
+
+        <label>Duration:</label>
+        <input type="number" name="duration" required><br><br>
+
+        <label>Campaign:</label>
+        <input type="number" name="campaign" required><br><br>
+
+        <label>Pdays:</label>
+        <input type="number" name="pdays" required><br><br>
+
+        <label>Previous:</label>
+        <input type="number" name="previous" required><br><br>
+
+        <label>Poutcome:</label>
+        <select name="poutcome" required>
+            <option value="0">Failure</option>
+            <option value="1">Non-existent</option>
+            <option value="2">Success</option>
+        </select><br><br>
+
+        <button type="submit">Predict</button>
+    </form>
+
+    <h3>{{ prediction_text }}</h3>
+
+</body>
+</html>
